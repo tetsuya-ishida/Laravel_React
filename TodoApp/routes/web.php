@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{any}', function(){
+
+Route::get('/', function () {
     return view('welcome');
-})->where('any', '.*');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
