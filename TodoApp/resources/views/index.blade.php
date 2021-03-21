@@ -9,5 +9,5 @@
     <body>
         <div id="app"></div>
     </body>
-    <script src="/js/index.js"></script>
+    <script src="/ts/index.tsx"></script>
 </html>
