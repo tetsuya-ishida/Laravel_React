@@ -24,9 +24,15 @@ class TaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    /**
+     *
+     */
     public function store(Request $request)
     {
-        //
+        $task = Task::creat($request->all());
+        return $task
+            ? response()->json($task, 201)
+            : response()->json([], 500);
     }
 
     /**
@@ -49,7 +55,10 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        $task->title = $request->title;
+        return $task->update()
+            ? response()->json($task)
+            : response()->json([], 500);
     }
 
     /**
@@ -60,6 +69,8 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        return $task->delete()
+            ? response()->json($task)
+            : response()->json([], 500);
     }
 }
