@@ -13,22 +13,14 @@ const Router = () => {
   return (
     <BrowserRouter>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">ホーム</Link>
-            </li>
-            <li>
-              <Link to="/help">ヘルプ</Link>
-            </li>
-            <li>
-              <Link to="/login">ログイン</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <header className="global-head">
+            <ul>
+                <li><Link to="/">ホーム</Link></li>
+                <li><Link to="/help">ヘルプ</Link></li>
+                <li><Link to="/login">ログイン</Link></li>
+                <li><span>ログアウト</span></li>
+            </ul>
+        </header>
         <Switch>
           <Route path="/help">
             <HelpPage />
