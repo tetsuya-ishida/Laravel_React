@@ -4,4 +4,5 @@ npm install && npm run dev
 npm install
 npm run prod
 npm run dev
+npm run watch
 php artisan serve
